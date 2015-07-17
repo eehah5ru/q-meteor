@@ -1,4 +1,30 @@
-<!-- vim:ts=4:sts=4:sw=4:et:tw=70 -->
+ - Throw if callback supplied to "finally" is invalid (@grahamrhay)
+
+## 1.4.1
+
+ - Address an issue that prevented Q from being used as a `<script>` for
+   Firefox add-ons. Q can now be used in any environment that provides `window`
+   or `self` globals, favoring `window` since add-ons have an an immutable
+   `self` that is distinct from `window`.
+
+## 1.4.0
+
+ - Add `noConflict` support for use in `<script>` (@jahnjw).
+
+## 1.3.0
+
+ - Add tracking for unhandled and handled rejections in Node.js (@benjamingr).
+
+## 1.2.1
+
+ - Fix Node.js environment detection for modern Browserify (@kahnjw).
+
+## 1.2.0
+
+ - Added Q.any(promisesArray) method (@vergara).
+   Returns a promise fulfilled with the value of the first resolved promise in
+   promisesArray. If all promises in promisesArray are rejected, it returns
+   a rejected promise.
 
 ## 1.1.2
 
@@ -109,7 +135,7 @@ have been distributed far and wide and demand long term support.
 
 ## 0.9.4
 
- - `isPromise` and `isPromiseAlike` now always returns a boolean 
+ - `isPromise` and `isPromiseAlike` now always returns a boolean
    (even for falsy values). #284 @lfac-pt
  - Support for ES6 Generators in `async` #288 @andywingo
  - Clear duplicate promise rejections from dispatch methods #238 @SLaks
@@ -759,4 +785,3 @@ Their replacements are listed here:
 ## 0.0.1
 
  - initial version
-

@@ -14,8 +14,8 @@ Package.onUse(function (api) {
 
   api.versionsFrom('METEOR@1.0');
 
-  api.use('aramk:requirejs', 'server');  
-  api.use('meteorhacks:npm', 'server');
+  // api.use('aramk:requirejs', 'server');  
+  // api.use('meteorhacks:npm', 'server');
   
   // EXPORT
   api.export('Q');
